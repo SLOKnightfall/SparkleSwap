@@ -44,9 +44,15 @@ local options = {
 					type = "header",
 					width = "full",
 				},
-				
+			
+				AutoStart = {
+					order = 2,
+					name = L["Start on Entering World"],
+					type = "toggle",
+					width = "full",
+				},
 				SwapDelay = {
-					order = 3,
+					order = 2,
 					name = L["Swap Delay"],
 					type = "range",
 					width = "full",
@@ -54,9 +60,8 @@ local options = {
 					max = 10,
 					step = 1,
 				},
-
 				EndState = {
-					order = 3.1,
+					order = 4,
 					name = L["Outline Mode when disabled"],
 					type = "select",
 					width = "full",
@@ -89,14 +94,15 @@ end
 
 
 function addon:OnEnable()
-	addon:Swap()	
+	if addon.Profile.AutoStart then 
+		addon:Swap()
+	end
 end
 
 
 local run = true
 function addon:Swap()
 	if not run then SetCVar("graphicsOutlineMode", self.db.EndState) return end
-
 	local value = GetCVar("graphicsOutlineMode")
 	if value == "3" then 
 		SetCVar("graphicsOutlineMode", 0)
