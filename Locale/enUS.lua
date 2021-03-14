@@ -8,3 +8,4 @@ L["Swap Delay"] = true
 L["Outline Mode when disabled"]= true
 L["Sparkles"] = true
 L["Outline"] = true
+L["Start on Entering World"] = true
