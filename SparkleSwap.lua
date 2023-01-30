@@ -104,10 +104,10 @@ local run = true
 function addon:Swap()
 	if not run then SetCVar("graphicsOutlineMode", self.db.EndState) return end
 	local value = GetCVar("graphicsOutlineMode")
-	if value == "3" then 
+	if value == "2" then 
 		SetCVar("graphicsOutlineMode", 0)
 	else
-		SetCVar("graphicsOutlineMode", 3)
+		SetCVar("graphicsOutlineMode", 2)
 	end
 
 	C_Timer.After(addon.Profile.SwapDelay, function() addon:Swap() end)
