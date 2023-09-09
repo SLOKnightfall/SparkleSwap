@@ -1,7 +1,7 @@
-## Interface: 100007
+## Interface: 100107
 ## Title: SparkleSwap (@project-version@)
 ## Version: @project-version@
-## Game Version: 10.0.7
+## Game Version: 10.1.7
 ## Author: SLOKnightfall
 ## Notes: Simple addon to swap between item sparkes and item outlines
 ## OptionalDeps: 
